@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+  <head>
+   <script    src="https://cdn.mojoauth.com/js/mojoauth.min.js">
+   </script>
+  </head>
+  <body>
+     <div id="mojoauth-passwordless-form"></div>
+      <script>
+        const mojoauth = new MojoAuth("Your MojoAuth API Key", {
+          language: 'HTML And JS',
+          redirect_url: "data.coderable.studio",
+          source: [{ type: "email", feature: "otp" }],
+        })
+        // Use source:[{type: "email", feature: "otp"}] for authentication using Email OTP
+        // Use source:[{type: "phone", feature: "otp"}] for authentication using SMS Authentication
+
+        mojoauth.signIn().then(response => console.log(response));
+      </script>
+
+  </body>
+</html>
