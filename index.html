@@ -6,9 +6,9 @@
   <body>
      <div id="mojoauth-passwordless-form"></div>
       <script>
-        const mojoauth = new MojoAuth("Your MojoAuth API Key", {
-          language: 'HTML And JS',
-          redirect_url: "data.coderable.studio",
+        const mojoauth = new MojoAuth("1938984b-5fca-4789-aceb-07661572f497", {
+          language: 'en',
+          redirect_url: "https://coderable.studio",
           source: [{ type: "email", feature: "otp" }],
         })
         // Use source:[{type: "email", feature: "otp"}] for authentication using Email OTP
